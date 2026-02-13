@@ -1,24 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const startBtn = document.querySelector(".start-btn");
     const welcomeScreen = document.getElementById("welcome");
     const homeScreen = document.getElementById("home");
+    const menuContainer = document.querySelector(".menu-container");
+    const items = document.querySelectorAll('.menu-card, .topping-card');
+    const paymentBtn = document.getElementById("paymentBtn");
+    const paymentBox = document.getElementById("paymentBox");
 
-    // Función para ir al home
+    // Ir al menú
     function goToHome() {
         welcomeScreen.classList.remove("active");
         homeScreen.classList.add("active");
+
+        items.forEach(item => item.classList.add('visible'));
     }
 
-    // Asignamos el click
+    // Mostrar / ocultar métodos de pago
+    function togglePayment() {
+        paymentBox.classList.toggle("show");
+    }
+
+    // Eventos
     startBtn.addEventListener("click", goToHome);
 
-    // Animación scroll fade-in
-    const items = document.querySelectorAll('.menu-card, .topping-card');
-    window.addEventListener('scroll', () => {
-        const trigger = window.innerHeight / 1.1;
-        items.forEach(item => {
-            const top = item.getBoundingClientRect().top;
-            if(top < trigger) item.classList.add('visible');
-        });
-    });
+    if (paymentBtn) {
+        paymentBtn.addEventListener("click", togglePayment);
+    }
+
 });
