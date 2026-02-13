@@ -109,11 +109,10 @@ body { font-family: 'Roboto', sans-serif; background-color:#fff8f4; overflow-x:h
 }
 .payment-btn {
     background:#6a5acd;
-    margin:10px auto 0 auto;
-    margin-left:65px;
-
+    margin:12px auto 0 auto;  /* 👈 esto lo centra igual */
+    display:block;            /* 👈 necesario */
+    width:fit-content;        /* 👈 mantiene tamaño natural */
 }
-
 
 /* Contenedor oculto elegante */
 .payment-box {
