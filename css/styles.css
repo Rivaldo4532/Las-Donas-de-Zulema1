@@ -112,6 +112,7 @@ body { font-family: 'Roboto', sans-serif; background-color:#fff8f4; overflow-x:h
     margin:12px auto 0 auto;  /* 👈 esto lo centra igual */
     display:block;            /* 👈 necesario */
     width:fit-content;        /* 👈 mantiene tamaño natural */
+     margin-left: 65;
 }
 
 /* Contenedor oculto elegante */
@@ -153,3 +154,4 @@ body { font-family: 'Roboto', sans-serif; background-color:#fff8f4; overflow-x:h
     border-radius: 10px;
     font-size: 13px;
 }
+
