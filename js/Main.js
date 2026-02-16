@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const items = document.querySelectorAll('.menu-card, .topping-card');
     const paymentBtn = document.getElementById("paymentBtn");
     const paymentBox = document.getElementById("paymentBox");
-    const uploadBtn = document.getElementById("uploadBtn");
-    const receiptInput = document.getElementById("receiptInput");
 
     // Ir al menú
     function goToHome() {
@@ -21,29 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
         paymentBox.classList.toggle("show");
     }
 
-    // Eventos principales
+    // Eventos
     if (startBtn) startBtn.addEventListener("click", goToHome);
     if (paymentBtn) paymentBtn.addEventListener("click", togglePayment);
-
-    // Subir comprobante
-    if (uploadBtn) {
-        uploadBtn.addEventListener("click", () => {
-            receiptInput.click();
-        });
-    }
-
-    if (receiptInput) {
-        receiptInput.addEventListener("change", () => {
-
-            if (receiptInput.files.length > 0) {
-
-                const phone = "526563190252";
-                const message = encodeURIComponent("Hola 😊 Te envío mi comprobante de pago. Enseguida adjunto la imagen.");
-
-                window.location.href = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
-            }
-
-        });
-    }
 
 });
