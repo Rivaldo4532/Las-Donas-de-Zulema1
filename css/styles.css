@@ -112,7 +112,7 @@ body { font-family: 'Roboto', sans-serif; background-color:#fff8f4; overflow-x:h
     margin:12px auto 0 auto;  /* 👈 esto lo centra igual */
     display:block;            /* 👈 necesario */
     width:fit-content;        /* 👈 mantiene tamaño natural */
-     margin-left: 65;
+    margin-left: 65;
 }
 
 /* Contenedor oculto elegante */
@@ -154,4 +154,30 @@ body { font-family: 'Roboto', sans-serif; background-color:#fff8f4; overflow-x:h
     border-radius: 10px;
     font-size: 13px;
 }
+.upload-section{
+    margin-top:25px;
+    text-align:center;
+    padding:15px;
+    background:#fff0f5;
+    border-radius:15px;
+}
 
+.upload-section h4{
+    margin-bottom:12px;
+    color:#ff6f91;
+}
+
+.upload-btn{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.upload-btn:hover{
+    transform:scale(1.05);
+}
