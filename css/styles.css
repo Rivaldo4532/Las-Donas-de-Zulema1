@@ -191,7 +191,15 @@ body {
 }
 
 .menu-grid{ grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); }
-.toppings-grid{ grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:12px; }
+.toppings-grid{ 
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr); /* SOLO 2 POR FILA */
+    gap:20px;
+    justify-content:center;
+    max-width:500px;
+    margin:0 auto;
+}
+
 
 .menu-card, .topping-card{
     background:white; 
