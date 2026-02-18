@@ -283,7 +283,9 @@ body {
     color:#ff3d6e;
 }
 
-
+/* ========================= */
+/* RESTO ORIGINAL SIN CAMBIOS */
+/* ========================= */
 
 .contact-section { margin-top: 40px; }
 .upload-section, .social-section, .location-section { margin-top: 25px; }
@@ -448,7 +450,9 @@ body {
     .menu-grid{ grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); }
     .toppings-grid{ grid-template-columns:repeat(auto-fill,minmax(100px,1fr)); }
 }
-
+/* ========================= */
+/* TOPPINGS MÁS ELEGANTES */
+/* ========================= */
 .topping-note{
     text-align:left;
     font-size:14px;
