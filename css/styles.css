@@ -6,7 +6,7 @@
 
 body { 
     font-family:'Roboto', sans-serif; 
-    background-color:#fff8f4; 
+    background-color:#ffffff; 
     overflow-x:hidden; 
 }
 
@@ -189,7 +189,15 @@ body {
 }
 
 .menu-grid{ grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); }
-.toppings-grid{ grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:12px; }
+
+.toppings-grid{ 
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    justify-content:center;
+    max-width:500px;
+    margin:0 auto;
+}
 
 .menu-card, .topping-card{
     background:white; 
@@ -220,24 +228,58 @@ body {
     color:#444; 
 }
 
-/* 🔥🔥🔥 NUEVO — TOPPINGS MÁS GRANDES Y SOLO 2 POR FILA 🔥🔥🔥 */
 
-.toppings-grid{
-    grid-template-columns: repeat(2, 1fr);
-    gap:20px;
-    max-width:500px;
-    margin:0 auto;
+
+.img-box{
+    position:relative;
 }
 
-.topping-card img{
-    height:160px;
-}
-
-.topping-card p{
-    font-size:16px;
+.price-badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:linear-gradient(135deg,#ff6f91,#ff3d6e);
+    color:white;
     font-weight:700;
-    padding:15px;
+    font-size:14px;
+    padding:6px 12px;
+    border-radius:50px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    letter-spacing:0.5px;
 }
+
+
+
+.hours-section{
+    display:flex;
+    justify-content:center;
+    margin:20px 0 40px 0;
+}
+
+.hours-card{
+    background:white;
+    padding:25px 35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:center;
+    border:2px solid #ffffff;
+}
+
+.days{
+    font-family:'Montserrat',sans-serif;
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:8px;
+    color:#333;
+}
+
+.time{
+    font-size:17px;
+    font-weight:600;
+    color:#ff3d6e;
+}
+
+
 
 .contact-section { margin-top: 40px; }
 .upload-section, .social-section, .location-section { margin-top: 25px; }
@@ -400,5 +442,40 @@ body {
 
 @media(max-width:768px){
     .menu-grid{ grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); }
-    .toppings-grid{ grid-template-columns:repeat(2,1fr); }
+    .toppings-grid{ grid-template-columns:repeat(auto-fill,minmax(100px,1fr)); }
+}
+
+.topping-note{
+    text-align:left;
+    font-size:14px;
+    line-height:1.7;
+    color:#555;
+    max-width:520px;
+    margin:0 auto 30px auto;
+    background:#ffffff;
+    padding:22px 25px;
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.07);
+    border:1px solid #ffffff;
+}
+
+
+.topping-card{
+    background:linear-gradient(145deg,#ffffff,#fff0f5);
+    border-radius:20px;
+    padding:18px 10px;
+    text-align:center;
+    font-weight:600;
+    font-size:15px;
+    color:#000000;
+    letter-spacing:0.5px;
+    border:1px solid #ffffff;
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+}
+
+.topping-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 25px rgba(0,0,0,0.15);
+    background:linear-gradient(145deg,#ffeff5,#ffffff);
 }
