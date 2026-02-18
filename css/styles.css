@@ -497,3 +497,34 @@ body {
     box-shadow:0 14px 25px rgba(0,0,0,0.15);
     background:linear-gradient(145deg,#ffeff5,#ffffff);
 }
+/* Espacio extra arriba de los títulos de sección */
+
+.menu-title {
+    margin-top: 50px;
+}
+
+.toppings-btn {
+    margin-top: 50px;
+}
+
+/* ===============================
+   CONTENEDOR REDES SOCIALES
+================================= */
+
+.social-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
